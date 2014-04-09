@@ -55,7 +55,7 @@ import java.util.regex.Pattern;
  * The administrative API for HBase.
  * Obtain an instance from an {@link HConnection}.
  *
- * @since 0.21.0
+ * @since 0.99.0
  */
 public interface Admin extends Abortable, Closeable {
   int getOperationTimeout();
