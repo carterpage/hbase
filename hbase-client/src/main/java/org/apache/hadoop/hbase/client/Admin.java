@@ -19,6 +19,9 @@
 package org.apache.hadoop.hbase.client;
 
 import com.google.protobuf.ServiceException;
+
+import org.apache.hadoop.classification.InterfaceAudience;
+import org.apache.hadoop.classification.InterfaceStability;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.Abortable;
 import org.apache.hadoop.hbase.ClusterStatus;
@@ -54,9 +57,12 @@ import java.util.regex.Pattern;
 /**
  * The administrative API for HBase.
  * Obtain an instance from an {@link HConnection}.
+ * This interface may be extended with new methods between versions.
  *
  * @since 0.99.0
  */
+@InterfaceAudience.Public
+@InterfaceStability.Evolving
 public interface Admin extends Abortable, Closeable {
   int getOperationTimeout();
 
